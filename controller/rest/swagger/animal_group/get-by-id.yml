@@ -1,0 +1,19 @@
+Busca um Pagador por ID
+Busca um  Pagador pelo seu ID
+---
+tags:
+  - payment
+parameters:
+  - in: path
+    name: id
+    description: Id (UUID) de um pagamento
+    required: true
+    type: string
+responses:
+  200:
+    description: Retorna o pagamento referente ao ID
+    schema:
+            type: object
+            $ref: '#/definitions/payment_put'
+  404:
+    description: Objeto não encontrado, Id inválido ou inexistente

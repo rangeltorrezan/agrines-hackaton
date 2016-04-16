@@ -1,0 +1,8 @@
+.idea
+python
+.pyc
+*.pyc
+reports
+.cache
+.coverage
+.cache

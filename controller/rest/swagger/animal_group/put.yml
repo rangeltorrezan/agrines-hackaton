@@ -1,0 +1,27 @@
+Altera um pagamento
+Faz a alteração de um pagamento pelo UUID.
+---
+tags:
+  - payment
+parameters:
+  - in: path
+    name: id
+    description: Id (UUID) do pagamento
+    required: true
+    type: string
+  - in: body
+    name: body
+    schema:
+      id: payment_put
+      required:
+        - uuid
+      properties:
+        status:
+          type: string
+          description: Status do pagamento.
+responses:
+  200:
+    description: Pagamento alterado
+    schema:
+        type: object
+        $ref: '#/definitions/payment_put'

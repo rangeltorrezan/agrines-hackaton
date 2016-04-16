@@ -1,0 +1,12 @@
+Busca pagamentos
+Busca todos os pagamentos cadastrados na base de dados.
+---
+tags:
+  - payment
+responses:
+  200:
+    description: Traz todos os pagamentos
+    schema:
+            type: array
+            items:
+              $ref: '#/definitions/payment_put'

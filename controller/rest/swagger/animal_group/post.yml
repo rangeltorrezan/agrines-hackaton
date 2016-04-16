@@ -1,0 +1,62 @@
+Cria um Pagador
+Cria um Pagador na base de pagamento-escritural-core.
+---
+tags:
+  - payer
+parameters:
+  - in: body
+    name: body
+    schema:
+      id: payer_post
+      required:
+        - uuid
+        - name
+        - entry
+        - entry_type
+        - postal_code
+        - street
+        - number
+        - neighborhood
+        - city
+        - state
+      properties:
+        uuid:
+          type: string
+          description: UUID referente ao pagador
+        name:
+          type: string
+          description: Nome do Pagador
+        entry:
+          type: string
+          description: Inscrição do Pagador
+        entry_type:
+          type: string
+          description: Tipo de Inscrição do Pagador
+        postal_code:
+          type: string
+          description: CEP do Pagador
+        street:
+          type: string
+          description: Rua do Pagador
+        number:
+          type: string
+          description: Numero do Pagador
+        neighborhood:
+          type: string
+          description: Bairro do Pagador
+        city:
+          type: string
+          description: Cidade do Pagador
+        state:
+          type: string
+          description: Estado do Pagador
+        complement:
+          type: string
+          description: Complemento do Pagador
+responses:
+  200:
+    description: Pagador Criado
+    schema:
+        type: object
+        $ref: '#/definitions/payer_post'
+
