@@ -5,7 +5,7 @@ Jinja2==2.8
 MarkupSafe==0.23
 PyYAML==3.11
 SQLAlchemy==1.0.9
-Werkzeug==0.11.4
+Werkzeug==0.15.3
 alembic==0.8.4
 argh==0.26.1
 astroid==1.4.4
